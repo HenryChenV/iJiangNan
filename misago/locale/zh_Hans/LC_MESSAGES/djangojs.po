@@ -2417,7 +2417,7 @@ msgstr[0] "用户名不可以超过%(limit_value)s字符。"
 
 #: static/misago/js/misago.js:23
 msgid "Username can only contain latin alphabet letters and digits."
-msgstr "用户名只可以包含拉丁字母和数字。"
+msgstr "用户名只可以包含中文, _, 拉丁字母和数字。"
 
 #: static/misago/js/misago.js:23
 msgid "Valid password must be at least %(limit_value)s character long."

@@ -5520,8 +5520,8 @@ msgid "This username is not allowed."
 msgstr "不允许使用此用户名。"
 
 #: users/validators.py:73
-msgid "Username can only contain latin alphabet letters and digits."
-msgstr "用户名只能包含拉丁字母和数字。"
+msgid "Username can only contain Chinese, latin alphabet letters and digits."
+msgstr "用户名只能包含中文, 拉丁字母, 下划线和数字。"
 
 #: users/validators.py:79
 #, python-format
