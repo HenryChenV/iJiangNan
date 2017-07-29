@@ -1,4 +1,4 @@
-"""testforum URL Configuration
+"""ijn URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -46,7 +46,7 @@ urlpatterns = [
     ),
 
     # Uncomment next line if you plan to use Django admin for 3rd party apps
-    #url(r'^django-admin/', admin.site.urls),
+    # url(r'^django-admin/', admin.site.urls),
 ]
 
 

@@ -1,5 +1,5 @@
 """
-WSGI config for testforum project.
+WSGI config for ijn project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -12,6 +12,6 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "testforum.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ijn.settings")
 
 application = get_wsgi_application()
