@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Define placeholder gettext function
 # This function will mark strings in settings visible to makemessages
 # without need for Django's i18n features be initialized first.
-_ = lambda x: x
+_ = lambda x: x  # noqa
 
 
 # Quick-start development settings - unsuitable for production
@@ -33,8 +33,10 @@ SECRET_KEY = 'r*ch#e01z*vj0k4cgj0g5(h1r2e!6kq4r^x892v)kl&_=f5g37'
 DEBUG = True
 
 
-# A list of strings representing the host/domain names that this Django site can serve.
-# If you are unsure, just enter here your domain name, eg. ['mysite.com', 'www.mysite.com']
+# A list of strings representing the host/domain names
+# that this Django site can serve.
+# If you are unsure, just enter here your domain name,
+# eg. ['mysite.com', 'www.mysite.com']
 
 ALLOWED_HOSTS = []
 
@@ -71,22 +73,22 @@ CACHES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa
         'OPTIONS': {
             'user_attributes': ['username', 'email'],
         }
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',  # noqa
         'OPTIONS': {
             'min_length': 7,
         }
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa
     },
 ]
 
@@ -118,7 +120,8 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 
-# The absolute path to the directory where collectstatic will collect static files for deployment.
+# The absolute path to the directory where collectstatic
+# will collect static files for deployment.
 # https://docs.djangoproject.com/en/1.11/ref/settings/#static-root
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -130,8 +133,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-# This setting defines the additional locations the staticfiles app will traverse if the FileSystemFinder finder
-# is enabled, e.g. if you use the collectstatic or findstatic management command or use the static file serving view.
+# This setting defines the additional locations the staticfiles app
+# will traverse if the FileSystemFinder finder
+# is enabled, e.g. if you use the collectstatic or findstatic management command
+# or use the static file serving view.
 # https://docs.djangoproject.com/en/1.10/ref/settings/#staticfiles-dirs
 
 STATICFILES_DIRS = [
@@ -148,11 +153,12 @@ EMAIL_PORT = 25
 
 # If either of these settings is empty, Django won't attempt authentication.
 
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = 'chen_hanli@163.com'
+EMAIL_HOST_PASSWORD = 'henry123chen'
 
 
-# Default email address to use for various automated correspondence from the site manager(s).
+# Default email address to use for various automated correspondence
+# from the site manager(s).
 
 DEFAULT_FROM_EMAIL = 'Forums <%s>' % EMAIL_HOST_USER
 
@@ -267,7 +273,8 @@ TEMPLATES = [
                 'misago.threads.context_processors.preload_threads_urls',
                 'misago.users.context_processors.preload_user_json',
 
-                # Note: keep frontend_context processor last for previous processors
+                # Note: keep frontend_context processor last
+                # for previous processors
                 # to be able to expose data UI app via request.frontend_context
                 'misago.core.context_processors.frontend_context',
             ],
@@ -279,7 +286,7 @@ WSGI_APPLICATION = 'ijn.wsgi.application'
 
 
 # Django Crispy Forms
-#http://django-crispy-forms.readthedocs.io/en/latest/install.html
+# http://django-crispy-forms.readthedocs.io/en/latest/install.html
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
@@ -329,7 +336,8 @@ REST_FRAMEWORK = {
 # Standard configs as of PostgreSQL 9.5 are: dutch, english, finnish, french,
 # german, hungarian, italian, norwegian, portuguese, romanian, russian, simple,
 # spanish, swedish and turkish
-# Example on adding custom language can be found here: https://github.com/lemonskyjwt/plpstgrssearch
+# Example on adding custom language can be found here:
+# https://github.com/lemonskyjwt/plpstgrssearch
 
 MISAGO_SEARCH_CONFIG = 'simple'
 
