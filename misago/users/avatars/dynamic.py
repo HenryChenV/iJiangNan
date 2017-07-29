@@ -51,7 +51,10 @@ def draw_avatar_bg(user, image):
 
 
 def draw_avatar_flavour(user, image):
-    string = user.username[0]
+    # for Chinese username, usernmae[0] is not i latin letter
+    # user slug instead of usernmae
+    # string = user.username[0]
+    string = user.slug[0]
 
     image_size = image.size[0]
 
