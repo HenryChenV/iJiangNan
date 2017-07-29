@@ -38,7 +38,11 @@ DEBUG = True
 # If you are unsure, just enter here your domain name,
 # eg. ['mysite.com', 'www.mysite.com']
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    'bbs.threebook.cn',
+    'ijn.threebook.cn',
+]
 
 
 # Database
