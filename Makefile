@@ -8,4 +8,4 @@ dbshell:
 	python manage.py dbshell
 
 deploy:
-	python manage.py collectstatic
+	git pull && python manage.py collectstatic && touch ~/softwares/uwsgi/apps-enabled/iJiangNan.ini
