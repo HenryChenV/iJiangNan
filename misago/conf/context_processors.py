@@ -16,6 +16,7 @@ def settings(request):
         'misago_settings': db_settings,
         'BLANK_AVATAR_URL': BLANK_AVATAR_URL,
         'THREADS_ON_INDEX': misago_settings.MISAGO_THREADS_ON_INDEX,
+        'USERS_ON_INDEX': misago_settings.MISAGO_USERS_ON_INDEX,
         'LOGIN_REDIRECT_URL': misago_settings.LOGIN_REDIRECT_URL,
         'LOGIN_URL': misago_settings.LOGIN_URL,
         'LOGOUT_URL': misago_settings.LOGOUT_URL,
@@ -39,6 +40,7 @@ def preload_settings_json(request):
         'STATIC_URL': misago_settings.STATIC_URL,
         'CSRF_COOKIE_NAME': misago_settings.CSRF_COOKIE_NAME,
         'THREADS_ON_INDEX': misago_settings.MISAGO_THREADS_ON_INDEX,
+        'USERS_ON_INDEX': misago_settings.MISAGO_USERS_ON_INDEX,
     })
 
     return {}

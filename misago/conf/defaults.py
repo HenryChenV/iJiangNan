@@ -142,6 +142,12 @@ MISAGO_ADMIN_SESSION_EXPIRATION = 60
 MISAGO_THREADS_ON_INDEX = False
 
 
+# Display Users on forum index
+# Change this to false to display users insteads
+
+MISAGO_USERS_ON_INDEX = False
+
+
 # Max age of notifications in days
 # Notifications older than this are deleted. On very active forums its better to keep this smaller.
 

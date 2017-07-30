@@ -35,13 +35,13 @@
         </a>
       </li>
       {% endif %}
-      <!--
+      {% if USERS_ON_INDEX %}
       <li>
         <a href="{% url 'misago:users' %}">
           {% trans "Users" %}
         </a>
       </li>
-      -->
+      {% endif %}
       {% if user.acl_cache.can_search %}
       <li>
         <a href="{% url 'misago:search' %}">
@@ -97,11 +97,13 @@
         </a>
       </li>
     {% endif %}
+    {% if USERS_ON_INDEX %}
     <li>
       <a href="{% url 'misago:users' %}">
         <i class="material-icon">group</i>
       </a>
     </li>
+    {% endif %}
     {% if user.acl_cache.can_search %}
       <li>
         <a href="{% url 'misago:search' %}">
