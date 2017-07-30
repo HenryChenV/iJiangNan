@@ -4,7 +4,9 @@
   <div class="container navbar-full navbar-desktop-nav">
     {% if misago_settings.forum_branding_display %}
     <a href="{% url 'misago:index' %}" class="navbar-brand">
+      <!--
       <img src="{% static 'misago/img/site-logo.png' %}" alt="">
+      -->
       {% if misago_settings.forum_branding_text %}
         <span class="hidden-xs hidden-sm">{{ misago_settings.forum_branding_text}}</span>
       {% endif %}
@@ -56,11 +58,16 @@
 
   <ul class="nav navbar-nav navbar-compact-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
     {% if misago_settings.forum_branding_display %}
+      {% if misago_settings.forum_branding_text %}
       <li>
         <a href="{% url 'misago:index' %}" class="brand-link">
+          <!--
           <img src="{% static 'misago/img/site-icon.png' %}" alt="">
+          -->
+            <span class="">{{ misago_settings.forum_branding_text}}</span>
         </a>
       </li>
+      {% endif %}
       {% if THREADS_ON_INDEX %}
         <li>
           <a href="{% url 'misago:categories' %}">
