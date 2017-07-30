@@ -35,11 +35,13 @@
         </a>
       </li>
       {% endif %}
+      <!--
       <li>
         <a href="{% url 'misago:users' %}">
           {% trans "Users" %}
         </a>
       </li>
+      -->
       {% if user.acl_cache.can_search %}
       <li>
         <a href="{% url 'misago:search' %}">
