@@ -76,24 +76,24 @@ CACHES = {
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa
-        'OPTIONS': {
-            'user_attributes': ['username', 'email'],
-        }
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa
+    #     'OPTIONS': {
+    #         'user_attributes': ['username', 'email'],
+    #     }
+    # },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',  # noqa
         'OPTIONS': {
-            'min_length': 7,
+            'min_length': 6,
         }
     },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa
+    # },
 ]
 
 
